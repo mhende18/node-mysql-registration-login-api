@@ -34,6 +34,7 @@ function registerSchema(req, res, next) {
     const schema = Joi.object({
         firstName: Joi.string().required(),
         lastName: Joi.string().required(),
+        email: Joi.string().required(), //This is added
         username: Joi.string().required(),
         password: Joi.string().min(6).required()
     });
@@ -66,6 +67,7 @@ function updateSchema(req, res, next) {
     const schema = Joi.object({
         firstName: Joi.string().empty(''),
         lastName: Joi.string().empty(''),
+        email: Joi.string().required(), //This is added
         username: Joi.string().empty(''),
         password: Joi.string().min(6).empty('')
     });
