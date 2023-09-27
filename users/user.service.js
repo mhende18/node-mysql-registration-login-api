@@ -31,7 +31,7 @@ async function getById(id) {
     return await getUser(id);
 }
 
-async function create(params) {
+async function create(params) {                                                        //add code here to check if email is already taken.
     // validate
     if (await db.User.findOne({ where: { username: params.username } })) {
         throw 'Username "' + params.username + '" is already taken';
