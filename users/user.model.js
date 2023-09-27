@@ -7,7 +7,7 @@ function model(sequelize) {
         firstName: { type: DataTypes.STRING, allowNull: false },
         lastName: { type: DataTypes.STRING, allowNull: false },
         username: { type: DataTypes.STRING, allowNull: false },
-        //email: { type: DataTypes.STRING, allowNull: false },                       // This line has been added for email... This creates the database schema. 
+        email: { type: DataTypes.STRING, allowNull: false },                       // This line has been added for email... This creates the database schema. 
         hash: { type: DataTypes.STRING, allowNull: false }
     };
 
